@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3D Plant Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background: #eee;
+        }
+
+        model-viewer {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <model-viewer id="mv" src="" alt="A 3D model" auto-rotate camera-controls background-color="#eee" ar></model-viewer>
+    <script>
+        // Get model file from query string
+        const params = new URLSearchParams(window.location.search);
+        const model = params.get('model');
+        if (model) {
+            document.getElementById('mv').src = model;
+        }
+    </script>
+</body>
+
+</html>
