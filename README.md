@@ -1,70 +1,185 @@
-# Getting Started with Create React App
+# Virtual Greenhouse 🌱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack web application for managing and exploring virtual greenhouses, plants, and shops. Built with React frontend and Node.js backend with MongoDB database.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Plant Management**: Browse, search, and manage plant collections
+- **Shop Integration**: Connect with plant shops and nurseries
+- **User Authentication**: Secure user registration and login system
+- **Shopping Cart**: Add plants to cart and manage orders
+- **Order Management**: Track and manage plant orders
+- **Responsive Design**: Modern UI that works on all devices
+- **Real-time Updates**: Dynamic content updates and notifications
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
+- **React 18** - Modern React with hooks
+- **React Router** - Client-side routing
+- **Axios** - HTTP client for API calls
+- **React Icons** - Icon library
+- **React Hot Toast** - Toast notifications
+- **FontAwesome** - Additional icons
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express.js** - Web framework
+- **MongoDB** - NoSQL database
+- **Mongoose** - MongoDB object modeling
+- **JWT** - Authentication tokens
+- **bcryptjs** - Password hashing
+- **Multer** - File upload handling
+- **Nodemailer** - Email functionality
+- **CORS** - Cross-origin resource sharing
 
-### `npm test`
+## 📁 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+virtual_house-1/
+├── backend/                 # Node.js backend
+│   ├── models/             # MongoDB schemas
+│   ├── routes/             # API routes
+│   ├── middleware/         # Custom middleware
+│   ├── scripts/            # Database seeding scripts
+│   ├── uploads/            # File uploads
+│   └── server.js           # Main server file
+├── frontend/               # React frontend
+│   ├── public/             # Static files
+│   ├── src/                # React source code
+│   │   ├── components/     # React components
+│   │   ├── pages/          # Page components
+│   │   ├── services/       # API services
+│   │   └── utils/          # Utility functions
+│   └── package.json
+└── README.md
+```
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (v14 or higher)
+- MongoDB (local or cloud instance)
+- npm or yarn package manager
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/gagansogasu/virtual-greenhouse.git
+   cd virtual-greenhouse
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install backend dependencies**
+   ```bash
+   cd backend
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Install frontend dependencies**
+   ```bash
+   cd ../frontend
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Environment Setup**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Create a `.env` file in the backend directory:
+   ```env
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret_key
+   PORT=5000
+   EMAIL_USER=your_email@gmail.com
+   EMAIL_PASS=your_email_password
+   ```
 
-## Learn More
+5. **Start the development servers**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   **Backend:**
+   ```bash
+   cd backend
+   npm run dev
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   **Frontend:**
+   ```bash
+   cd frontend
+   npm start
+   ```
 
-### Code Splitting
+   The application will be available at:
+   - Frontend: http://localhost:3000
+   - Backend API: http://localhost:5000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📚 API Endpoints
 
-### Analyzing the Bundle Size
+### Authentication
+- `POST /api/users/register` - User registration
+- `POST /api/users/login` - User login
+- `GET /api/users/profile` - Get user profile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Plants
+- `GET /api/plants` - Get all plants
+- `GET /api/plants/:id` - Get plant by ID
+- `POST /api/plants` - Create new plant
+- `PUT /api/plants/:id` - Update plant
+- `DELETE /api/plants/:id` - Delete plant
 
-### Making a Progressive Web App
+### Shops
+- `GET /api/shops` - Get all shops
+- `GET /api/shops/:id` - Get shop by ID
+- `POST /api/shops` - Create new shop
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Cart & Orders
+- `GET /api/cart` - Get user cart
+- `POST /api/cart` - Add item to cart
+- `DELETE /api/cart/:id` - Remove item from cart
+- `GET /api/orders` - Get user orders
+- `POST /api/orders` - Create new order
 
-### Advanced Configuration
+## 🎨 Features in Detail
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Plant Management
+- Browse plants with search and filter functionality
+- View detailed plant information including care instructions
+- Add plants to favorites and shopping cart
+- Plant categorization and tagging
 
-### Deployment
+### Shop Integration
+- Connect with local and online plant shops
+- Shop ratings and reviews
+- Direct ordering from shops
+- Shop location and contact information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### User Experience
+- Responsive design for mobile and desktop
+- Real-time notifications
+- Smooth animations and transitions
+- Intuitive navigation
 
-### `npm run build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Gagan K S** - [@gagansogasu](https://github.com/gagansogasu)
+
+## 🙏 Acknowledgments
+
+- React team for the amazing framework
+- MongoDB team for the database
+- All open-source contributors whose libraries made this possible
+
+---
+
+⭐ If you find this project helpful, please give it a star! 
