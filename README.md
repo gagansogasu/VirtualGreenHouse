@@ -182,4 +182,4 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 
 ---
 
-⭐ If you find this project helpful, please give it a star!
+⭐ If you find this project helpful, please give it a star! 
