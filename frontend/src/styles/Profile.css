@@ -1,0 +1,536 @@
+/* Profile Page Styles */
+.profile-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.profile-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.profile-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.profile-nav a:hover {
+  color: #2e7d32;
+}
+
+.profile-nav a.active {
+  color: #2e7d32;
+}
+
+.profile-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2e7d32;
+}
+
+.logout-btn {
+  background-color: transparent;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+/* Profile Container Styles */
+.profile-container {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar Styles */
+.profile-sidebar {
+  width: 250px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #e8f5e9;
+}
+
+.profile-avatar h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.profile-avatar p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.profile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu li {
+  padding: 0.75rem 0;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+}
+
+.profile-menu li:hover {
+  color: #2e7d32;
+  padding-left: 0.5rem;
+}
+
+.profile-menu li.active {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Profile Content Styles */
+.profile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.edit-btn {
+  background-color: transparent;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #e8f5e9;
+}
+
+/* Profile Info Styles */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-group {
+  display: flex;
+  align-items: baseline;
+}
+
+.info-label {
+  width: 150px;
+  font-weight: 600;
+  color: #555;
+}
+
+.info-value {
+  color: #333;
+}
+
+/* Profile Form Styles */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.2);
+}
+
+.save-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.save-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Orders Styles */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.order-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #eee;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #333;
+}
+
+.order-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.order-status.processing {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.order-status.shipped {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.order-status.delivered {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.order-status.cancelled {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.order-items {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-price {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.order-total {
+  font-weight: 600;
+  color: #333;
+}
+
+.view-details-btn {
+  background-color: transparent;
+  border: 1px solid #2e7d32;
+  color: #2e7d32;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #e8f5e9;
+}
+
+.no-orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.no-orders p {
+  color: #666;
+  margin: 0;
+}
+
+.browse-shops-btn {
+  background-color: #2e7d32;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.browse-shops-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Footer Styles */
+.profile-footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.footer-section p {
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section a {
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #4caf50;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: #2e7d32;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+  }
+
+  .profile-header {
+    padding: 1rem;
+  }
+
+  .profile-nav {
+    gap: 1rem;
+  }
+
+  .info-group {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .info-label {
+    width: auto;
+  }
+
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}

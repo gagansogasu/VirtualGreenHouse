@@ -1,0 +1,250 @@
+/* UserRegister.css */
+
+:root {
+  --primary-color: #2e7d32;
+  --primary-dark: #1b5e20;
+  --secondary-color: #ff9800;
+  --text-color: #333;
+  --text-light: #666;
+  --background-light: #f8f9fa;
+  --white: #fff;
+  --error-color: #d32f2f;
+  --success-color: #2e7d32;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.register-card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  min-height: 800px;
+}
+
+.center-section {
+  flex: 1;
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.center-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.right-section {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.register-header h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.register-header p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.success-message {
+  background: #e8f5e9;
+  color: var(--success-color);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.error-message {
+  background: #ffebee;
+  color: var(--error-color);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+}
+
+input.error {
+  border-color: var(--error-color);
+}
+
+.error-text {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.checkbox label {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.checkbox a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.checkbox a:hover {
+  text-decoration: underline;
+}
+
+.register-btn {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1rem;
+}
+
+.register-btn:hover {
+  background: var(--primary-dark);
+}
+
+.register-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.login-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.register-type-link {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--text-light);
+}
+
+.register-type-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-type-link a:hover {
+  text-decoration: underline;
+}
+
+.form-group .error-message {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .register-card {
+    flex-direction: column;
+  }
+
+  .center-section {
+    display: none;
+  }
+
+  .right-section {
+    padding: 2rem;
+  }
+}

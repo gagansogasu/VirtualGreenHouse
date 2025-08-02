@@ -1,0 +1,500 @@
+/* NurseryDetails.css */
+
+/* Base Styles */
+.nursery-details {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #333;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2e7d32;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.error-container {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.error-container h2 {
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
+}
+
+/* Header */
+.nursery-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 30px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 1.5rem;
+}
+
+.back-button:hover {
+  background: #e8f5e9;
+  transform: translateX(-3px);
+}
+
+.back-button svg {
+  font-size: 0.8em;
+}
+
+.nursery-header h1 {
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin: 0;
+}
+
+/* Hero Section */
+.nursery-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nursery-image {
+  height: 400px;
+  overflow: hidden;
+}
+
+.nursery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.nursery-hero:hover .nursery-image img {
+  transform: scale(1.03);
+}
+
+.nursery-info {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nursery-info h2 {
+  font-size: 1.8rem;
+  color: #1b5e20;
+  margin: 0 0 1.2rem 0;
+  line-height: 1.3;
+}
+
+.nursery-description {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.contact-info {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.contact-icon {
+  color: #2e7d32;
+  font-size: 1.2rem;
+  min-width: 24px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: #2e7d32;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #1b5e20;
+  text-decoration: underline;
+}
+
+.virtual-tour-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  align-self: flex-start;
+}
+
+.virtual-tour-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #2e7d32;
+  background-color: #f5f5f5;
+}
+
+.tab.active {
+  color: #2e7d32;
+  border-bottom-color: #2e7d32;
+  font-weight: 600;
+}
+
+.tab svg {
+  font-size: 1.1em;
+}
+
+/* Plants Grid */
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.plant-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8f5e9;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.plant-image {
+  height: 220px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f5e9;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+  overflow: hidden;
+}
+
+.plant-image img {
+  max-width: 100%;
+  max-height: 190px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #f6fff8;
+}
+
+.plant-card:hover .plant-image img {
+  transform: scale(1.05);
+}
+
+.plant-details {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-details h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1b5e20;
+  font-size: 1.2rem;
+}
+
+.plant-category {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.plant-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.plant-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.plant-actions {
+  display: flex;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.view-3d-btn {
+  flex: 1;
+  background: #4a6fa5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.view-3d-btn:hover {
+  background: #3a5a80;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-3d-btn::before {
+  content: '🔄';
+  font-size: 1.1em;
+}
+
+.plant-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.add-to-cart {
+  flex: 1;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.add-to-cart:hover {
+  background: #1b5e20;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart::before {
+  content: '🛒';
+  font-size: 1.1em;
+}
+
+/* Virtual Tour */
+.virtual-tour {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.virtual-tour h3 {
+  color: #1b5e20;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.tour-description {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nursery-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .nursery-image {
+    height: 300px;
+  }
+
+  .nursery-info {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .tab {
+    padding: 0.8rem 1.5rem;
+    white-space: nowrap;
+  }
+
+  .plants-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .nursery-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nursery-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .virtual-tour {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nursery-hero {
+    margin-bottom: 2rem;
+  }
+
+  .nursery-info {
+    padding: 1.5rem;
+  }
+
+  .plants-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plant-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .add-to-cart {
+    width: 100%;
+  }
+}
